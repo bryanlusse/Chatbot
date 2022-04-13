@@ -20,7 +20,7 @@ requests==2.27.1
 sacremoses==0.0.49
 six==1.16.0
 tokenizers==0.11.6
-https://download.pytorch.org/whl/cpu/torch-1.11.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
+torch==1.11.0+cpu
 tqdm==4.64.0
 transformers==4.18.0
 typing_extensions==4.1.1
