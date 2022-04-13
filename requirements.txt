@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 certifi==2021.10.8
 charset-normalizer==2.0.12
 click==8.1.2
