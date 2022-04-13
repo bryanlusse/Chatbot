@@ -16,7 +16,7 @@ current_messages = {
 		}]
 	}
 # Init model
-conversational_pipeline = pipeline("conversational")
+conversational_pipeline = pipeline("conversational", model="facebook/blenderbot_small-90M")
 conv1_start = 'How is the weather?'
 conv1 = Conversation(conv1_start)
 conversational_pipeline(conv1)
