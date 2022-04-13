@@ -1,0 +1,35 @@
+<head>
+<link id="link" rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="getCurrentTime()">
+
+<div class="hero-body">
+        <div class="container">
+                <div id="mockChat"></div>
+                <div id="viewport"></div>
+                <div class="bezzle"></div>
+                <div class="speaker"></div>    
+        </div>
+        <button type="button" id="button">New conversation</button>
+</div>
+        
+        
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        mockChat.init({
+        id: "mockChat",
+        });
+        
+    })
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script type="text/javascript">
+    window._json = '{{ chat }}'
+</script>
+</body>
