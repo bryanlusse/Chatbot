@@ -104,12 +104,14 @@ ul > li:after {
 	background-color: #eee;
 	color: #000;
 	border-bottom-left-radius: 0.125rem;
+	text-align: left;
 }
 .msg.you {
 	float: right;
 	background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
 	color: #fff;
 	border-bottom-right-radius: 0.125rem;
+	text-align: right;
 }
 
 .msg.load { 

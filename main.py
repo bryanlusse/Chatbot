@@ -4,6 +4,7 @@ from flask import request
 from flask import jsonify
 import time
 from transformers import pipeline, Conversation
+import requests
 
 # Init first message
 current_messages = {
@@ -15,11 +16,13 @@ current_messages = {
 			"action": ''
 		}]
 	}
+API_TOKEN = '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'
 # Init model
-conversational_pipeline = pipeline("conversational", model="facebook/blenderbot_small-90M")
-conv1_start = 'How is the weather?'
-conv1 = Conversation(conv1_start)
-conversational_pipeline(conv1)
+def query(payload, model_id, api_token):
+    headers = {"Authorization": f"Bearer {api_token}"}
+    API_URL = f"https://api-inference.huggingface.co/models/{model_id}"
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
 
 nrMod = 0
 ## Create app
@@ -29,24 +32,14 @@ app = Flask(__name__,template_folder='templates')
 @app.route('/', methods=['GET','POST'])
 def page():
     global current_messages
-    global conv1
     global nrMod
+    global API_TOKEN
     if request.method == 'GET':
         return render_template('chat.html', chat = current_messages)
     if request.method == 'POST':
         current_messages = request.json
-        if len(current_messages['chats'])==2:
-            nrMod+=1
-            if nrMod==1:
-                pass
-            else:
-                #Reinitialize conversation
-                conv1 = Conversation(conv1_start)
-                conversational_pipeline(conv1)
-
         msg = current_messages['chats'][-1]['msg']
-        conv1.add_user_input(msg)
-        responses = conversational_pipeline(conv1).generated_responses
+        responses = query(msg,'facebook/blenderbot_small-90M',API_TOKEN)['conversation']['generated_responses']
         response = responses[-1]
         current_messages['chats'].append({'from': 'James', 'msg': response, 'time': str(round(time.time()*1000)), 'action': ''})
         return current_messages
