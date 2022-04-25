@@ -10,10 +10,11 @@ current_messages = {
 		"chats": [{
 			"from": 'James',
 			"msg": 'Hi, what do you want to chat about?',
-			"time": '1533263925814',
 			"action": ''
 		}]
 	}
+current_messages['chats'][0]['time'] = str(round(time.time()*1000))
+print(str(round(time.time()*1000)), flush=True)
 API_TOKEN = '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'
 # Define query function
 def query(payload, model_id, api_token):

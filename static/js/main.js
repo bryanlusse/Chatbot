@@ -75,8 +75,6 @@ $(function (){
 	
 	// RENDER METHODS
 	function renderData () {
-		var _now = $.now();
-		getDateTime(_now);
 		var userID = 'You';
 		var parentString = '<div class="chatbox" id="'+userID+'">'+
              '<div class="top-bar">'+
@@ -102,7 +100,7 @@ $(function (){
                 '<div class="msg ' + _cl +'">'+
                 '<span class="partner">'+ chat.from +'</span>'+
                 chat.msg +
-                '<span class="time">' + getDateTime (chat.time) + '</span>'+
+                '<span class="time">' + getDateTime(chat.time) + '</span>'+
                 '</div></li>';
             if (chat.from == 'James' && chat.time == _json.chats.slice(-1)[0].time){
                 demo(userID = userID, dataString = dataString)
@@ -130,7 +128,7 @@ $(function (){
 			.append('<li><div class="msg '+_cl+'">'+
 					  '<span class="partner">'+ data.from +'</span>'+
 					  data.msg +
-					  '<span class="time">' + getDateTime (data.time) + '</span>'+
+					  '<span class="time">' + getDateTime(data.time) + '</span>'+
 					  '</div>'+
 					  '</li>');	
 	}
@@ -153,17 +151,18 @@ $(function (){
 	}
 	
 	// HELPER FUNCTION
-	function getDateTime (t) {
+	function getDateTime(t) {
 		var month 	= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];	
-		var d 		= new Date(t/1000),
-			 month 	= (month[d.getMonth()]),
-			 day 		= d.getDate().toString(),
-			 hour 	= d.getHours().toString(),
-			 min 		= d.getMinutes().toString();
+		var d 		= new Date(+t);
+        var month2 	= (month[d.getMonth()]);
+        var day 	= d.getDate().toString();
+        var hour 	= d.getHours().toString();
+        var min 	= d.getMinutes().toString();
 		(day.length < 2) ? day = '0' + day : '';
 		(hour.length < 2) ? hour = '0' + hour : '';
-		(min.length < 2) ? min = '0' + min : '';		
-		var res = ''+month+' '+day+' '+hour+ ':' + min;
+		(min.length < 2) ? min = '0' + min : '';
+        console.log(d)
+		var res = ''+month2+' '+day+' '+hour+ ':' + min;
 		return res;
 	}
 	
@@ -195,9 +194,6 @@ $(function (){
 			} else {
 				$('#viewport .chats ul>li.pending').remove();
 			}
-            // for (temp in _json.chats){
-            //     newMsgRender (temp);
-            // }
 
 		}
 	});	
