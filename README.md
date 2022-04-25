@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.jpg" alt="drawing" width="400"/> 
+<img src="assets/logo.jpg" alt="drawing" width="400"/>\ 
 Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector created by vectorjuice - www.freepik.com</a>
 
 
