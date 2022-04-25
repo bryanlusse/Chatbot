@@ -35,8 +35,8 @@ body {
 	display: table;
 	float: left;
 	margin: 0.7rem;
-	width: 23.5rem;
-	height: 48.6rem;
+	width: 18.7rem;
+	height: 38.5rem;
     background-color: white;
     background-image: linear-gradient(#FCF7FF, #e4eaf0);
     border-radius: 40px;
@@ -105,6 +105,7 @@ ul > li:after {
 	color: #000;
 	border-bottom-left-radius: 0.125rem;
 	text-align: left;
+	font-size: 11.5;
 }
 .msg.you {
 	float: right;
@@ -112,6 +113,7 @@ ul > li:after {
 	color: #fff;
 	border-bottom-right-radius: 0.125rem;
 	text-align: right;
+	font-size: 11.5;
 }
 
 .msg.load { 
@@ -125,9 +127,8 @@ ul > li:after {
 }
 .msg > span.partner {
 	color: #B0BEC5;
-	font-size: 0.5rem;
 	top: 0;
-	font-size: 0.675rem;
+	font-size: 0.6rem;
 	margin-top: -1rem;
 }
 .msg > span.time {
@@ -197,7 +198,7 @@ input:active {
   position: absolute;
   width: 100%;
   color: #283747;
-  max-width: 400px;
+  max-width: 320px;
   height: auto;
   line-height: 1.25;
   perspective: 900px;
@@ -261,7 +262,7 @@ input:active {
 	content: "";
 	position: absolute;
 	height: 4%;
-	width: 170px;
+	width: 140px;
 	background: #283747;
 	top: 10px;
 	border-radius: 0 0 10px 10px;
@@ -298,17 +299,20 @@ input:active {
 }
 
 .hero-body {
+	position: fixed;
     background: #2596be;
-    width: 100%;
+	width: 100%;
 	z-index: 1;
 	display: flex;
   	justify-content: center;
+	top: 0px;
+	bottom: 0px;
 }
 
 .p1 {
     color: black;
 	font-weight: bold;
-	font-size: 15;
+	font-size: 12;
 	position: absolute;
 	top: 0;  
 	left: 30px;
@@ -327,8 +331,13 @@ button {
 	position: absolute;
 	overflow: hidden;
 	text-align: center;
-	width: 200px;
+	width: 150px;
 	margin: 0 auto;
-	top: 900px;
+	top: 720px;
 	display: inline;
+	font-size: 14;
 }
+
+::placeholder {
+	font-size: 12;
+  }

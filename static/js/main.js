@@ -92,7 +92,7 @@ $(function (){
 			 '</div>'+
 			 '<div class="sendBox">'+
             //  '<form action="" method="post">'+
-             '<input type="text" name="sendToBot" placeholder="Enter next message '+'...">'+
+             '<input style="font-size:12;" type="text" name="sendToBot" placeholder="Enter next message '+'...">' +
             //  '</form>'+			 
              '</div>';	
 		$('#viewport').append(parentString);
