@@ -15,14 +15,14 @@ Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector c
 •
 [Screenshot](#rice_scene-screenshot)
 •
-[URL](#dvd-demo)
+[URL](#computer-url)
 </div>
 
 ## :bookmark_tabs: Menu
 
 - [Overview](#scroll-overview)
 - [Screenshot](#rice_scene-screenshot)
-- [URL](#dvd-demo)
+- [URL](#computer-url)
 - [Requirements](#exclamation-requirements)
 - [Folder Structure](#open_file_folder-folder-structure)
 - [Author](#smiley_cat-author)
