@@ -1,9 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
-from flask import jsonify
 import time
-from transformers import pipeline, Conversation
 import requests
 
 # Init first message
@@ -17,14 +15,13 @@ current_messages = {
 		}]
 	}
 API_TOKEN = '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'
-# Init model
+# Define query function
 def query(payload, model_id, api_token):
     headers = {"Authorization": f"Bearer {api_token}"}
     API_URL = f"https://api-inference.huggingface.co/models/{model_id}"
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
 
-nrMod = 0
 ## Create app
 
 app = Flask(__name__,template_folder='templates')
@@ -32,7 +29,6 @@ app = Flask(__name__,template_folder='templates')
 @app.route('/', methods=['GET','POST'])
 def page():
     global current_messages
-    global nrMod
     global API_TOKEN
     if request.method == 'GET':
         return render_template('chat.html', chat = current_messages)

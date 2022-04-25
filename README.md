@@ -29,7 +29,7 @@ Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector c
 
 ## :scroll: Overview
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut praesentium neque assumenda! Tempore culpa nihil laborum distinctio vel, illo quod veniam. Excepturi soluta beatae sed iusto sunt, impedit ducimus dignissimos?
+This web app serves as an interface to chat with a chatbot. It is possible to have a conversation with the chatbot about almost any topic imagineable. Just type in your question or topic, hit enter, and see what the chatbot has to say about it. The conversation can be reset with the button on the bottom of the screen. Enjoy!
 
 ## :rice_scene: Screenshot
 
