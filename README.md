@@ -1,10 +1,11 @@
 <div align="center">
 
-![Logo](assets/logo.jpg))
+![Logo](assets/logo.jpg) 
+<img src="assets/logo.jpg" alt="drawing" width="200"/> Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector created by vectorjuice - www.freepik.com</a>
 
-# Title
 
-![Badge](https://img.shields.io/badge/badge-badge-brightgreen)
+# Chatbot
+
 ![Badge](https://img.shields.io/github/languages/code-size/bryanlusse/Chatbot)
 ![Badge](https://img.shields.io/github/languages/count/bryanlusse/chatbot)
 ![Badge](https://img.shields.io/github/last-commit/bryanlusse/chatbot)
@@ -40,9 +41,9 @@ http://chatbot1-app.herokuapp.com/
 
 ## :exclamation: Requirements
 
-- [Python](https://nodejs.org/en/download/)
-- [Flask](https://php.net/)
-- [Huggingface](https://php.net/)
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+- [Huggingface](https://huggingface.co/)
 
 ## :open_file_folder: Folder Structure
 
@@ -51,15 +52,15 @@ http://chatbot1-app.herokuapp.com/
 ├── main.py              # Project source code
 ├── Procfile
 ├── requirements.txt
-├── wsgi.py    
-├── Templates            # Doc for the project
+├── wsgi.py
+├── Templates            # Folder with HTML templates
 │   └── chat.html
 ├── Static
-│   ├── CSS
+│   ├── CSS              # Folder with CSS
 │   │   └── main.css
-│   ├── JS
+│   ├── JS               # Folder with JS 
 │   │   └── main.js
-├── Assets
+├── Assets               # Images for the README
 │   ├── logo.jpg
 │   └── screenshot.png
 └── README.md
