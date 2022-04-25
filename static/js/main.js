@@ -91,9 +91,7 @@ $(function (){
 			 '<ul></ul>'+
 			 '</div>'+
 			 '<div class="sendBox">'+
-            //  '<form action="" method="post">'+
              '<input style="font-size:12;" type="text" name="sendToBot" placeholder="Enter next message '+'...">' +
-            //  '</form>'+			 
              '</div>';	
 		$('#viewport').append(parentString);
         for (message in _json.chats){
@@ -227,10 +225,6 @@ $(function (){
             box.textContent = '';
             box.remove();
         });
-        // chats = Array.from(document.getElementsByClassName('chats'));
-        // chats.forEach(chat => {
-        //     chat.remove();
-        // });
         renderData();
         console.log("restarted")
         $('#viewport .sendBox>input').keypress(function( e ) {	
@@ -260,10 +254,6 @@ $(function (){
                 } else {
                     $('#viewport .chats ul>li.pending').remove();
                 }
-                // for (temp in _json.chats){
-                //     newMsgRender (temp);
-                // }
-    
             }
         });	
     }
@@ -316,10 +306,3 @@ let mockChat = {
     
   }
   setInterval(getCurrentTime, 10000);
-
-  
-//   function initChat(){
-//     getCurrentTime();
-
-
-//   }
