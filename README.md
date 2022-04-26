@@ -16,6 +16,8 @@ Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector c
 [Screenshot](#rice_scene-screenshot)
 •
 [URL](#computer-url)
+•
+[Blogpost](https://medium.com/@blusse7/deploying-a-chatbot-on-heroku-using-flask-and-huggingface-7dadb77d8f48)
 </div>
 
 ## :bookmark_tabs: Menu
@@ -29,7 +31,8 @@ Image credit: <a href="https://www.freepik.com/vectors/chatbot">Chatbot vector c
 
 ## :scroll: Overview
 
-This web app serves as an interface to chat with a chatbot. It is possible to have a conversation with the chatbot about almost any topic imagineable. Just type in your question or topic, hit enter, and see what the chatbot has to say about it. The conversation can be reset with the button on the bottom of the screen. Enjoy!
+This web app serves as an interface to chat with a chatbot. It is possible to have a conversation with the chatbot about almost any topic imagineable. Just type in your question or topic, hit enter, and see what the chatbot has to say about it. The conversation can be reset with the button on the bottom of the screen. For more information, see the accompanying blogpost on [Medium](https://medium.com/@blusse7/deploying-a-chatbot-on-heroku-using-flask-and-huggingface-7dadb77d8f48).
+Enjoy!
 
 ## :rice_scene: Screenshot
 
