@@ -15,7 +15,7 @@ current_messages = {
 	}
 current_messages['chats'][0]['time'] = str(round(time.time()*1000))
 print(str(round(time.time()*1000)), flush=True)
-API_TOKEN = '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'
+API_TOKEN = '***********' # Retrieve own API token to make this work
 # Define query function
 def query(payload, model_id, api_token):
     headers = {"Authorization": f"Bearer {api_token}"}
